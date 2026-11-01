@@ -27,3 +27,26 @@ pengganti akan tampil bila gambar tidak dapat dimuat.
 Tombol akun demo pada layar masuk dapat digunakan untuk langsung mencoba kedua
 peran. Perubahan data berlaku selama aplikasi berjalan dan dapat dilihat bersama
 oleh Admin dan User.
+
+## Autosync ke GitHub
+
+`autosync.ps1` melakukan commit, `pull --rebase`, dan `push` otomatis ke GitHub
+setiap 60 detik selama script berjalan.
+
+```powershell
+# PowerShell
+.\autosync.ps1
+```
+
+atau klik dua kali `autosync.cmd` (Command Prompt). Hentikan dengan `Ctrl+C`.
+Opsi lain:
+
+```powershell
+.\autosync.ps1 -IntervalSeconds 120   # interval lain
+.\autosync.ps1 -Branch main           # branch lain
+.\autosync.ps1 -Once                  # satu siklus saja
+```
+
+Aktivitas tercatat di `autosync.log` (diabaikan git). Bila `pull --rebase`
+mengalami konflik, script membatalkan rebase, mencatat peringatan, dan mencoba
+lagi pada siklus berikutnya.
