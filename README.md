@@ -1,5 +1,7 @@
 # ElectroMart
 
+Tugas akhir mobile programming semester 4 - Kelompok 1
+
 Aplikasi demo e-commerce elektronik berbasis Flutter dan Dart. Data produk,
 favorit, keranjang, kategori, stok, dan pesanan disimpan di memori selama aplikasi
 berjalan. Aplikasi tidak menggunakan backend atau Firebase.
